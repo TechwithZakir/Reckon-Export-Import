@@ -1,6 +1,11 @@
 {
- "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Shipments\",\"level\":4,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Import Shipments\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Export Shipments\",\"col\":4}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"Operations\",\"level\":4,\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Shipment Management\",\"col\":4}}]",
+ "charts": [
+  {"chart_name":"Import Shipment Status","label":"Import Shipment Status"},
+  {"chart_name":"Export Shipment Status","label":"Export Shipment Status"},
+  {"chart_name":"LC Portfolio by Status","label":"LC Portfolio by Status"},
+  {"chart_name":"Export Collection Status","label":"Export Collection Status"}
+ ],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Trade Operations Overview\",\"level\":3,\"col\":12}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Import Shipments\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Export Shipments\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"LCs Expiring in 30 Days\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Overdue Export Collections\",\"col\":3}},{\"type\":\"header\",\"data\":{\"text\":\"Start or Continue Work\",\"level\":4,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Import Shipment\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Export Shipment\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Upcoming Deadlines\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pending Collections\",\"col\":3}},{\"type\":\"header\",\"data\":{\"text\":\"Shipment Pipeline\",\"level\":4,\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Import Shipment Status\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Export Shipment Status\",\"col\":6}},{\"type\":\"header\",\"data\":{\"text\":\"Finance and Compliance\",\"level\":4,\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"LC Portfolio by Status\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Export Collection Status\",\"col\":6}},{\"type\":\"header\",\"data\":{\"text\":\"Guided Workflow\",\"level\":4,\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"1. Plan and Book\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"2. Ship and Clear\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"3. Settle and Review\",\"col\":4}},{\"type\":\"header\",\"data\":{\"text\":\"Reports and Analysis\",\"level\":4,\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Operational Reports\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Master Records\",\"col\":4}}]",
  "creation": "2026-08-17 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -15,11 +20,29 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Shipment Management",
-   "link_count": 9,
+   "label": "1. Plan and Book",
+   "link_count": 4,
    "onboard": 0,
    "type": "Card Break"
   },
+  {"dependencies":"","hidden":0,"is_query_report":0,"label":"Create Import Shipment","link_count":0,"link_to":"Import Shipment","link_type":"DocType","onboard":0,"type":"Link"},
+  {"dependencies":"","hidden":0,"is_query_report":0,"label":"Create Export Shipment","link_count":0,"link_to":"Export Shipment","link_type":"DocType","onboard":0,"type":"Link"},
+  {"dependencies":"","hidden":0,"is_query_report":0,"label":"Open or Advise LC","link_count":0,"link_to":"Trade LC","link_type":"DocType","onboard":0,"type":"Link"},
+  {"dependencies":"","hidden":0,"is_query_report":0,"label":"Prepare Document Checklist","link_count":0,"link_to":"Document Checklist","link_type":"DocType","onboard":0,"type":"Link"},
+  {"hidden":0,"is_query_report":0,"label":"2. Ship and Clear","link_count":4,"onboard":0,"type":"Card Break"},
+  {"dependencies":"","hidden":0,"is_query_report":0,"label":"Track Containers","link_count":0,"link_to":"Shipment Container","link_type":"DocType","onboard":0,"type":"Link"},
+  {"dependencies":"","hidden":0,"is_query_report":0,"label":"Maintain Trade Documents","link_count":0,"link_to":"Trade Document","link_type":"DocType","onboard":0,"type":"Link"},
+  {"dependencies":"","hidden":0,"is_query_report":0,"label":"Complete Customs Declaration","link_count":0,"link_to":"Customs Declaration","link_type":"DocType","onboard":0,"type":"Link"},
+  {"dependencies":"","hidden":0,"is_query_report":0,"label":"Capture Shipment Costs","link_count":0,"link_to":"Shipment Cost Sheet","link_type":"DocType","onboard":0,"type":"Link"},
+  {"hidden":0,"is_query_report":0,"label":"3. Settle and Review","link_count":3,"onboard":0,"type":"Card Break"},
+  {"dependencies":"","hidden":0,"is_query_report":0,"label":"Post Landed Costs","link_count":0,"link_to":"Shipment Cost Sheet","link_type":"DocType","onboard":0,"type":"Link"},
+  {"dependencies":"","hidden":0,"is_query_report":0,"label":"Record Export Realisation","link_count":0,"link_to":"Export Realisation","link_type":"DocType","onboard":0,"type":"Link"},
+  {"dependencies":"","hidden":0,"is_query_report":1,"label":"Review Finance Exposure","link_count":0,"link_to":"Trade Finance Exposure","link_type":"Report","onboard":0,"type":"Link"},
+  {"hidden":0,"is_query_report":0,"label":"Operational Reports","link_count":3,"onboard":0,"type":"Card Break"},
+  {"dependencies":"","hidden":0,"is_query_report":1,"label":"Shipment Pipeline","link_count":0,"link_to":"Shipment Pipeline","link_type":"Report","onboard":0,"type":"Link"},
+  {"dependencies":"","hidden":0,"is_query_report":1,"label":"Trade Deadline Monitor","link_count":0,"link_to":"Trade Deadline Monitor","link_type":"Report","onboard":0,"type":"Link"},
+  {"dependencies":"","hidden":0,"is_query_report":1,"label":"Trade Finance Exposure","link_count":0,"link_to":"Trade Finance Exposure","link_type":"Report","onboard":0,"type":"Link"},
+  {"hidden":0,"is_query_report":0,"label":"Master Records","link_count":9,"onboard":0,"type":"Card Break"},
   {
    "dependencies": "",
    "hidden": 0,
@@ -54,7 +77,12 @@
  "modified_by": "Administrator",
  "module": "Reckon Export Import",
  "name": "Reckon Export Import",
- "number_cards": [],
+ "number_cards": [
+  {"label":"Active Import Shipments","number_card_name":"Active Import Shipments"},
+  {"label":"Active Export Shipments","number_card_name":"Active Export Shipments"},
+  {"label":"LCs Expiring in 30 Days","number_card_name":"LCs Expiring in 30 Days"},
+  {"label":"Overdue Export Collections","number_card_name":"Overdue Export Collections"}
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
@@ -73,17 +101,21 @@
   {
    "color": "Blue",
    "doc_view": "List",
-   "label": "Import Shipments",
+   "label": "New Import Shipment",
    "link_to": "Import Shipment",
-   "type": "DocType"
+   "type": "DocType",
+   "doc_view": "New"
   },
   {
    "color": "Green",
    "doc_view": "List",
-   "label": "Export Shipments",
+   "label": "New Export Shipment",
    "link_to": "Export Shipment",
-   "type": "DocType"
-  }
+   "type": "DocType",
+   "doc_view": "New"
+  },
+  {"color":"Orange","doc_view":"Report","label":"Upcoming Deadlines","link_to":"Trade Deadline Monitor","type":"Report"},
+  {"color":"Red","doc_view":"List","label":"Pending Collections","link_to":"Export Realisation","type":"DocType","stats_filter":"{\"status\": [\"in\", [\"Pending\", \"Partially Realised\", \"Overdue\"]]}"}
  ],
  "title": "Export Import"
 }

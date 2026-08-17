@@ -1,0 +1,19 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "disabled": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "Reckon Export Import",
+ "name": "Shipment Pipeline",
+ "prepared_report": 0,
+ "ref_doctype": "Import Shipment",
+ "report_name": "Shipment Pipeline",
+ "report_type": "Script Report",
+ "roles": [
+  {"role": "Import Manager"},
+  {"role": "Export Manager"},
+  {"role": "Accounts Manager"},
+  {"role": "System Manager"}
+ ]
+}
