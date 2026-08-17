@@ -1,0 +1,28 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-08-17 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["order_doctype", "order", "transaction_date", "currency", "grand_total"],
+ "fields": [
+  {"fieldname": "order_doctype", "fieldtype": "Select", "in_list_view": 1, "label": "Order Type", "options": "Purchase Order\nSales Order", "reqd": 1},
+  {"fieldname": "order", "fieldtype": "Dynamic Link", "in_list_view": 1, "label": "Order", "options": "order_doctype", "reqd": 1},
+  {"fetch_from": "order.transaction_date", "fieldname": "transaction_date", "fieldtype": "Date", "label": "Date", "read_only": 1},
+  {"fetch_from": "order.currency", "fieldname": "currency", "fieldtype": "Link", "label": "Currency", "options": "Currency", "read_only": 1},
+  {"fetch_from": "order.grand_total", "fieldname": "grand_total", "fieldtype": "Currency", "label": "Grand Total", "options": "currency", "read_only": 1}
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-17 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Reckon Export Import",
+ "name": "Trade Shipment Order",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
+
