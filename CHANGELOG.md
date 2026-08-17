@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 - 2026-08-17
+
+- Force-reload the standard Export Import Workspace after installation and
+  migration so renamed labels and newly added MVP links replace stale database
+  content.
+
 ## 0.2.0 - 2026-08-17
 
 First MVP release for Frappe/ERPNext 15 and 16.
@@ -28,4 +34,3 @@ bench --site your-site.local clear-cache
 bench build --app reckon_export_import
 bench restart
 ```
-

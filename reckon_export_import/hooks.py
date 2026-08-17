@@ -7,6 +7,9 @@ app_license = "GPL-3.0-or-later"
 
 required_apps = ["erpnext"]
 
+after_install = "reckon_export_import.install.sync_workspace"
+after_migrate = "reckon_export_import.install.sync_workspace"
+
 fixtures = [
 	{"dt": "Role", "filters": [["name", "in", [
 		"Import Manager",
