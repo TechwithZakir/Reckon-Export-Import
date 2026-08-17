@@ -20,7 +20,7 @@
   {"fieldname": "currency", "fieldtype": "Link", "label": "Currency", "options": "Currency", "reqd": 1},
   {"default": "1", "fieldname": "conversion_rate", "fieldtype": "Float", "label": "Conversion Rate", "precision": "9", "reqd": 1},
   {"fieldname": "logistics_section", "fieldtype": "Section Break", "label": "Logistics"},
-  {"default": "Sea", "fieldname": "shipment_mode", "fieldtype": "Select", "label": "Shipment Mode", "options": "Sea\nAir\nRoad\nRail\nCourier\nMultimodal", "reqd": 1},
+  {"default": "Sea", "fieldname": "shipment_mode", "fieldtype": "Select", "label": "Shipment Mode", "options": "Sea\nAir\nRoad\nLand\nRail\nCourier\nMultimodal", "reqd": 1},
   {"fieldname": "destination_country", "fieldtype": "Link", "label": "Destination Country", "options": "Country"},
   {"fieldname": "port_of_loading", "fieldtype": "Data", "label": "Port of Loading"},
   {"fieldname": "logistics_column", "fieldtype": "Column Break"},

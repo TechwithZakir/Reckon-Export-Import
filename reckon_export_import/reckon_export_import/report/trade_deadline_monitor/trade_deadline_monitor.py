@@ -28,7 +28,7 @@ def execute(filters=None):
 		data.append(_deadline("LC Expiry", "Trade LC", row.name, f"{row.lc_number} · {row.party}", row.expiry_date, row.status, row.owner, today))
 	container_filters = {"last_free_date": date_filter, "status": ["not in", ["Delivered", "Empty Returned"]]}
 	for row in frappe.get_list("Shipment Container", filters=container_filters, fields=["name", "container_no", "last_free_date", "status", "owner"]):
-		data.append(_deadline("Container Free Time", "Shipment Container", row.name, row.container_no, row.last_free_date, row.status, row.owner, today))
+		data.append(_deadline("Free / Storage Time", "Shipment Container", row.name, row.container_no, row.last_free_date, row.status, row.owner, today))
 	data.sort(key=lambda row: row["days_remaining"])
 	return columns, data
 
