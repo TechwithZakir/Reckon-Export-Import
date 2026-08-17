@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — Frappe 15 analytics fixes
+
+- Match every Script Report directory and module filename to Frappe's scrubbed
+  report title, preventing `ModuleNotFoundError` when reports are opened.
+- Replace the vertical Role Dashboards card with four equal-width homepage
+  shortcuts and explicit workspace routes.
+- Align homepage workspace targets with the role-dashboard labels used by
+  Frappe Desk routing.
+
 ## Unreleased — Phase 2 foundation
 
 - LC amendment history and discrepancy handling
