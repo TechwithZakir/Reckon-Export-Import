@@ -1,0 +1,22 @@
+[
+ {
+  "align_labels_right": 0,
+  "custom_format": 1,
+  "disabled": 0,
+  "doc_type": "Trade Document",
+  "doctype": "Print Format",
+  "font": "Default",
+  "html": "<div class=\"text-center\"><h2>{{ doc.document_type }}</h2><p>{{ doc.document_no or doc.name }}</p></div><table class=\"table table-bordered\"><tr><th>Shipment</th><td>{{ doc.shipment }}</td><th>Issue Date</th><td>{{ frappe.utils.formatdate(doc.issue_date) if doc.issue_date else '' }}</td></tr><tr><th>Party</th><td>{{ doc.party or '' }}</td><th>Currency</th><td>{{ doc.currency or '' }}</td></tr></table>{% if doc.items %}<table class=\"table table-bordered\"><thead><tr><th>#</th><th>Description</th><th class=\"text-right\">Qty</th><th>UOM</th><th class=\"text-right\">Rate</th><th class=\"text-right\">Amount</th></tr></thead><tbody>{% for row in doc.items %}<tr><td>{{ loop.index }}</td><td>{{ row.description }}</td><td class=\"text-right\">{{ row.quantity }}</td><td>{{ row.uom or '' }}</td><td class=\"text-right\">{{ row.rate }}</td><td class=\"text-right\">{{ row.amount }}</td></tr>{% endfor %}</tbody></table>{% endif %}<div class=\"text-right\"><strong>Total: {{ doc.document_amount or 0 }} {{ doc.currency or '' }}</strong></div>{% if doc.remarks %}<p><strong>Remarks:</strong> {{ doc.remarks }}</p>{% endif %}",
+  "include_default_page_size": 1,
+  "margin_bottom": 15.0,
+  "margin_left": 15.0,
+  "margin_right": 15.0,
+  "margin_top": 15.0,
+  "module": "Reckon Export Import",
+  "name": "Trade Document Standard",
+  "print_format_type": "Jinja",
+  "raw_printing": 0,
+  "show_section_headings": 1,
+  "standard": "Yes"
+ }
+]

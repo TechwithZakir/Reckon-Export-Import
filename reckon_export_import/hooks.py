@@ -14,5 +14,9 @@ fixtures = [
 		"Trade Finance Officer",
 		"Trade Documentation Officer",
 	]]]},
+	{"dt": "Print Format", "filters": [["name", "=", "Trade Document Standard"]]},
 ]
 
+scheduler_events = {
+	"daily": ["reckon_export_import.alerts.send_trade_deadline_alerts"],
+}

@@ -41,3 +41,11 @@ Then open `/app/reckon-export-import`. Do not use
 4. Containers and logistics milestones
 5. Customs declarations and shipment costs
 6. Landed Cost Voucher and Export Realisation integration
+
+## MVP 0.2.0
+
+The MVP includes Trade LC, unified printable trade documents, customs
+declarations, container tracking, cost sheets, Landed Cost Voucher integration,
+export realisation, document checklists, dashboards, lifecycle actions, and
+deadline alerts. Forms use two-column sections for efficient data entry; child
+tables remain full-width for readability.

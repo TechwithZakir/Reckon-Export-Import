@@ -6,7 +6,6 @@ def get_data():
 		{
 			"module_name": "Reckon Export Import",
 			"type": "module",
-			"label": _("Reckon Export Import"),
+			"label": _("Export Import"),
 		},
 	]
-

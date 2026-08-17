@@ -1,0 +1,29 @@
+{
+ "doctype":"DocType","name":"Trade Document","module":"Reckon Export Import","autoname":"naming_series:","is_submittable":1,"track_changes":1,"engine":"InnoDB","sort_field":"modified","sort_order":"DESC",
+ "field_order":["naming_series","document_type","document_no","status","party_section","shipment_type","shipment","cb_party","party_type","party","dates_section","issue_date","expiry_date","cb_dates","place_of_issue","originals","copies","transport_section","carrier","vessel_flight","cb_transport","port_of_loading","port_of_discharge","items_section","items","amount_section","currency","document_amount","cb_amount","gross_weight","net_weight","package_count","attachment_section","attachment","remarks"],
+ "fields":[
+  {"fieldname":"naming_series","fieldtype":"Select","options":"TD-.YYYY.-.#####","default":"TD-.YYYY.-.#####","hidden":1,"reqd":1,"label":"Series"},
+  {"fieldname":"document_type","fieldtype":"Select","options":"Commercial Invoice\nPacking List\nBill of Lading\nAir Waybill\nCertificate of Origin\nInsurance Certificate\nInspection Certificate\nOther","label":"Document Type","reqd":1,"in_list_view":1},
+  {"fieldname":"document_no","fieldtype":"Data","label":"Document Number","in_list_view":1},
+  {"fieldname":"status","fieldtype":"Select","options":"Draft\nPrepared\nIssued\nPresented\nAccepted\nExpired\nCancelled","default":"Draft","label":"Status","in_list_view":1},
+  {"fieldname":"party_section","fieldtype":"Section Break","label":"Shipment and Party"},
+  {"fieldname":"shipment_type","fieldtype":"Select","options":"Import Shipment\nExport Shipment","label":"Shipment Type","reqd":1},
+  {"fieldname":"shipment","fieldtype":"Dynamic Link","options":"shipment_type","label":"Shipment","reqd":1,"in_list_view":1},
+  {"fieldname":"cb_party","fieldtype":"Column Break"},
+  {"fieldname":"party_type","fieldtype":"Select","options":"Supplier\nCustomer","label":"Party Type"},
+  {"fieldname":"party","fieldtype":"Dynamic Link","options":"party_type","label":"Party"},
+  {"fieldname":"dates_section","fieldtype":"Section Break","label":"Issue Details"},
+  {"fieldname":"issue_date","fieldtype":"Date","label":"Issue Date"}, {"fieldname":"expiry_date","fieldtype":"Date","label":"Expiry Date"},
+  {"fieldname":"cb_dates","fieldtype":"Column Break"}, {"fieldname":"place_of_issue","fieldtype":"Data","label":"Place of Issue"},
+  {"fieldname":"originals","fieldtype":"Int","label":"Originals"}, {"fieldname":"copies","fieldtype":"Int","label":"Copies"},
+  {"fieldname":"transport_section","fieldtype":"Section Break","label":"Transport Details"},
+  {"fieldname":"carrier","fieldtype":"Data","label":"Carrier / Shipping Line"}, {"fieldname":"vessel_flight","fieldtype":"Data","label":"Vessel / Flight"},
+  {"fieldname":"cb_transport","fieldtype":"Column Break"}, {"fieldname":"port_of_loading","fieldtype":"Data","label":"Port of Loading"}, {"fieldname":"port_of_discharge","fieldtype":"Data","label":"Port of Discharge"},
+  {"fieldname":"items_section","fieldtype":"Section Break","label":"Goods / Packages"}, {"fieldname":"items","fieldtype":"Table","options":"Trade Document Item","label":"Items"},
+  {"fieldname":"amount_section","fieldtype":"Section Break","label":"Amounts and Cargo"},
+  {"fieldname":"currency","fieldtype":"Link","options":"Currency","label":"Currency"}, {"fieldname":"document_amount","fieldtype":"Currency","options":"currency","label":"Document Amount"},
+  {"fieldname":"cb_amount","fieldtype":"Column Break"}, {"fieldname":"gross_weight","fieldtype":"Float","label":"Gross Weight"}, {"fieldname":"net_weight","fieldtype":"Float","label":"Net Weight"}, {"fieldname":"package_count","fieldtype":"Int","label":"Packages"},
+  {"fieldname":"attachment_section","fieldtype":"Section Break","label":"File and Notes"}, {"fieldname":"attachment","fieldtype":"Attach","label":"Document File"}, {"fieldname":"remarks","fieldtype":"Small Text","label":"Remarks"}
+ ],
+ "permissions":[{"role":"Import Manager","read":1,"write":1,"create":1,"delete":1,"submit":1,"cancel":1,"print":1,"email":1,"report":1},{"role":"Export Manager","read":1,"write":1,"create":1,"delete":1,"submit":1,"cancel":1,"print":1,"email":1,"report":1},{"role":"Trade Documentation Officer","read":1,"write":1,"create":1,"submit":1,"print":1,"email":1,"report":1},{"role":"System Manager","read":1,"write":1,"create":1,"delete":1,"submit":1,"cancel":1,"print":1,"email":1,"report":1}]
+}

@@ -5,7 +5,7 @@
  "creation": "2026-08-17 00:00:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
- "field_order": ["naming_series", "company", "supplier", "status", "workflow_state", "trade_section", "payment_method", "incoterm", "currency", "conversion_rate", "logistics_section", "shipment_mode", "origin_country", "port_of_loading", "port_of_discharge", "destination_warehouse", "estimated_departure_date", "estimated_arrival_date", "actual_arrival_date", "orders_section", "orders", "references_section", "references", "totals_section", "goods_value", "estimated_cost", "actual_cost", "landed_cost", "notes"],
+ "field_order": ["naming_series", "company", "supplier", "status", "workflow_state", "trade_section", "payment_method", "incoterm", "trade_column", "currency", "conversion_rate", "logistics_section", "shipment_mode", "origin_country", "port_of_loading", "logistics_column", "port_of_discharge", "destination_warehouse", "estimated_departure_date", "estimated_arrival_date", "actual_arrival_date", "orders_section", "orders", "references_section", "references", "totals_section", "goods_value", "estimated_cost", "totals_column", "actual_cost", "landed_cost", "notes_section", "notes"],
  "fields": [
   {"default": "IMP-.YYYY.-.#####", "fieldname": "naming_series", "fieldtype": "Select", "hidden": 1, "label": "Series", "options": "IMP-.YYYY.-.#####", "reqd": 1},
   {"fieldname": "company", "fieldtype": "Link", "in_list_view": 1, "label": "Company", "options": "Company", "reqd": 1},
@@ -15,12 +15,14 @@
   {"fieldname": "trade_section", "fieldtype": "Section Break", "label": "Trade Terms"},
   {"default": "Letter of Credit", "fieldname": "payment_method", "fieldtype": "Select", "label": "Payment Method", "options": "Letter of Credit\nAdvance Payment\nDocumentary Collection\nOpen Account\nOther", "reqd": 1},
   {"fieldname": "incoterm", "fieldtype": "Link", "label": "Incoterm", "options": "Incoterm"},
+  {"fieldname": "trade_column", "fieldtype": "Column Break"},
   {"fieldname": "currency", "fieldtype": "Link", "label": "Currency", "options": "Currency", "reqd": 1},
   {"default": "1", "fieldname": "conversion_rate", "fieldtype": "Float", "label": "Conversion Rate", "precision": "9", "reqd": 1},
   {"fieldname": "logistics_section", "fieldtype": "Section Break", "label": "Logistics"},
   {"default": "Sea", "fieldname": "shipment_mode", "fieldtype": "Select", "label": "Shipment Mode", "options": "Sea\nAir\nRoad\nRail\nCourier\nMultimodal", "reqd": 1},
   {"fieldname": "origin_country", "fieldtype": "Link", "label": "Country of Origin", "options": "Country"},
   {"fieldname": "port_of_loading", "fieldtype": "Data", "label": "Port of Loading"},
+  {"fieldname": "logistics_column", "fieldtype": "Column Break"},
   {"fieldname": "port_of_discharge", "fieldtype": "Data", "label": "Port of Discharge"},
   {"fieldname": "destination_warehouse", "fieldtype": "Link", "label": "Destination Warehouse", "options": "Warehouse"},
   {"fieldname": "estimated_departure_date", "fieldtype": "Date", "label": "Estimated Departure"},
@@ -33,8 +35,10 @@
   {"fieldname": "totals_section", "fieldtype": "Section Break", "label": "Cost Summary"},
   {"fieldname": "goods_value", "fieldtype": "Currency", "label": "Goods Value", "options": "currency", "read_only": 1},
   {"fieldname": "estimated_cost", "fieldtype": "Currency", "label": "Estimated Charges", "options": "currency", "read_only": 1},
+  {"fieldname": "totals_column", "fieldtype": "Column Break"},
   {"fieldname": "actual_cost", "fieldtype": "Currency", "label": "Actual Charges", "options": "currency", "read_only": 1},
   {"fieldname": "landed_cost", "fieldtype": "Currency", "label": "Landed Cost", "options": "currency", "read_only": 1},
+  {"fieldname": "notes_section", "fieldtype": "Section Break", "label": "Internal Notes"},
   {"fieldname": "notes", "fieldtype": "Text Editor", "label": "Notes"}
  ],
  "index_web_pages_for_search": 1,
@@ -54,4 +58,3 @@
  "states": [],
  "track_changes": 1
 }
-
