@@ -1,0 +1,46 @@
+[
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "doctype": "Role",
+  "home_page": "",
+  "is_custom": 1,
+  "name": "Import Manager",
+  "restrict_to_domain": "",
+  "role_name": "Import Manager",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "doctype": "Role",
+  "home_page": "",
+  "is_custom": 1,
+  "name": "Export Manager",
+  "restrict_to_domain": "",
+  "role_name": "Export Manager",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "doctype": "Role",
+  "home_page": "",
+  "is_custom": 1,
+  "name": "Trade Finance Officer",
+  "restrict_to_domain": "",
+  "role_name": "Trade Finance Officer",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "doctype": "Role",
+  "home_page": "",
+  "is_custom": 1,
+  "name": "Trade Documentation Officer",
+  "restrict_to_domain": "",
+  "role_name": "Trade Documentation Officer",
+  "two_factor_auth": 0
+ }
+]

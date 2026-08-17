@@ -1,0 +1,83 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Shipments\",\"level\":4,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Import Shipments\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Export Shipments\",\"col\":4}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"Operations\",\"level\":4,\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Shipment Management\",\"col\":4}}]",
+ "creation": "2026-08-17 00:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "shipping",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Reckon Export Import",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Shipment Management",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Import Shipment",
+   "link_count": 0,
+   "link_to": "Import Shipment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Export Shipment",
+   "link_count": 0,
+   "link_to": "Export Shipment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-17 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Reckon Export Import",
+ "name": "Reckon Export Import",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Import Manager"},
+  {"role": "Export Manager"},
+  {"role": "Trade Finance Officer"},
+  {"role": "Trade Documentation Officer"},
+  {"role": "Accounts Manager"}
+ ],
+ "sequence_id": 30,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Import Shipments",
+   "link_to": "Import Shipment",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Export Shipments",
+   "link_to": "Export Shipment",
+   "type": "DocType"
+  }
+ ],
+ "title": "Reckon Export Import"
+}
+

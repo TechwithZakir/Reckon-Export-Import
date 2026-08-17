@@ -17,10 +17,21 @@ those records into a shipment file.
 ## Development install
 
 ```bash
-bench get-app https://github.com/mzakirhossain/Reckon-Export-Import
+bench get-app https://github.com/TechwithZakir/Reckon-Export-Import
 bench --site your-site.local install-app reckon_export_import
 bench --site your-site.local migrate
 ```
+
+After updating an existing installation, run:
+
+```bash
+bench --site your-site.local migrate
+bench --site your-site.local clear-cache
+bench build --app reckon_export_import
+```
+
+Then open `/app/reckon-export-import`. Do not use
+`/app/reckon_export_import`; Frappe Desk routes use hyphens.
 
 ## Initial roadmap
 
@@ -30,4 +41,3 @@ bench --site your-site.local migrate
 4. Containers and logistics milestones
 5. Customs declarations and shipment costs
 6. Landed Cost Voucher and Export Realisation integration
-
