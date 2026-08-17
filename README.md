@@ -17,7 +17,7 @@ those records into a shipment file.
 ## Development install
 
 ```bash
-bench get-app /path/to/reckon_export_import
+bench get-app https://github.com/mzakirhossain/Reckon-Export-Import
 bench --site your-site.local install-app reckon_export_import
 bench --site your-site.local migrate
 ```
