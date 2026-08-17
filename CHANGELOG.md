@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased — Phase 2 foundation
+
+- LC amendment history and discrepancy handling
+- Multimodal shipment bookings with revised and actual schedule legs
+- Effective-dated demurrage, detention, combined, and storage tariffs with
+  free-day and tiered charge calculations
+- Versioned, human-verified Bangladesh-first customs rules
+- OCR capture review records and provider-neutral bank/carrier interfaces
+- Permission-checked mobile milestone endpoint
+- Shipment profitability and compliance report
+- Role-focused Logistics, Trade Finance, Compliance, and Trade Accounts
+  analytics workspaces with exception KPIs and status charts
+- Booking performance, LC amendment/discrepancy, demurrage exposure, and
+  customs/document compliance drill-down reports
+
 ## 0.2.1 - 2026-08-17
 
 - Force-reload the standard Export Import Workspace after installation and

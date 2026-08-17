@@ -4,6 +4,12 @@ import frappe
 
 
 WORKSPACE_NAME = "Reckon Export Import"
+ROLE_WORKSPACES = (
+	"logistics_operations_analytics",
+	"trade_finance_analytics",
+	"trade_compliance_analytics",
+	"trade_accounts_analytics",
+)
 
 
 def sync_workspace():
@@ -21,6 +27,8 @@ def sync_workspace():
 		"reckon_export_import",
 		force=True,
 	)
+	for workspace in ROLE_WORKSPACES:
+		frappe.reload_doc("reckon_export_import", "workspace", workspace, force=True)
 	if frappe.db.exists("Workspace", WORKSPACE_NAME):
 		frappe.db.set_value(
 			"Workspace",
@@ -59,6 +67,12 @@ def _number_cards():
 		_count_card("Active Export Shipments", "Export Shipment", [["Export Shipment", "status", "not in", ["Financially Closed", "Cancelled"], False]], "Green"),
 		_count_card("LCs Expiring in 30 Days", "Trade LC", [["Trade LC", "expiry_date", "Timespan", "next 30 days", False], ["Trade LC", "status", "not in", ["Closed", "Cancelled"], False]], "Orange"),
 		_count_card("Overdue Export Collections", "Export Realisation", [["Export Realisation", "status", "=", "Overdue", False]], "Red"),
+		_count_card("Unconfirmed Shipment Bookings", "Shipment Booking", [["Shipment Booking", "status", "in", ["Draft", "Requested", "Quoted", "Rolled Over"], False]], "Orange"),
+		_count_card("Open LC Discrepancies", "LC Discrepancy", [["LC Discrepancy", "status", "not in", ["Waived", "Resolved", "Rejected"], False]], "Red"),
+		_count_card("Customs Declarations In Progress", "Customs Declaration", [["Customs Declaration", "status", "not in", ["Released", "Cancelled"], False]], "Blue"),
+		_count_card("OCR Documents Awaiting Review", "OCR Document Capture", [["OCR Document Capture", "status", "in", ["Queued", "Processing", "Needs Review", "Failed"], False]], "Orange"),
+		_count_card("Open Document Checklists", "Document Checklist", [["Document Checklist", "status", "not in", ["Complete", "Cancelled"], False]], "Yellow"),
+		_count_card("Shipment Cost Sheets In Progress", "Shipment Cost Sheet", [["Shipment Cost Sheet", "status", "not in", ["Posted", "Cancelled"], False]], "Purple"),
 	]
 
 
@@ -76,6 +90,13 @@ def _dashboard_charts():
 		_group_chart("Export Shipment Status", "Export Shipment", "status", "Donut"),
 		_group_chart("LC Portfolio by Status", "Trade LC", "status", "Bar"),
 		_group_chart("Export Collection Status", "Export Realisation", "status", "Bar"),
+		_group_chart("Shipment Booking Status", "Shipment Booking", "status", "Donut"),
+		_group_chart("LC Discrepancy Status", "LC Discrepancy", "status", "Donut"),
+		_group_chart("LC Discrepancy Severity", "LC Discrepancy", "severity", "Bar"),
+		_group_chart("Customs Declaration Status", "Customs Declaration", "status", "Donut"),
+		_group_chart("OCR Capture Status", "OCR Document Capture", "status", "Donut"),
+		_group_chart("Document Checklist Status", "Document Checklist", "status", "Bar"),
+		_group_chart("Shipment Cost Sheet Status", "Shipment Cost Sheet", "status", "Donut"),
 	]
 
 

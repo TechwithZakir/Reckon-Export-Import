@@ -33,14 +33,25 @@ bench build --app reckon_export_import
 Then open `/app/reckon-export-import`. Do not use
 `/app/reckon_export_import`; Frappe Desk routes use hyphens.
 
-## Initial roadmap
+## Roadmap
 
-1. Import Shipment and Export Shipment control records
-2. Trade LC and amendments
-3. Trade-document checklists and document generation
-4. Containers and logistics milestones
-5. Customs declarations and shipment costs
-6. Landed Cost Voucher and Export Realisation integration
+The MVP foundation is complete. The detailed [Phase 2 and Phase 3 product
+roadmap](ROADMAP.md) covers operational automation, Bangladesh-first customs
+rules, integrations, portals, mobile updates, OCR, advanced analytics,
+electronic filing, live tracking, and multi-country localization.
+
+The roadmap distinguishes features that can be delivered entirely inside
+Frappe from integrations that require institution agreements, authorized APIs,
+sandbox credentials, regulatory approval, or external service contracts.
+
+### Phase 2 implementation status
+
+The repository now includes the Phase 2 operational foundation: LC amendments
+and discrepancies, multimodal bookings and schedule legs, tiered demurrage and
+storage tariffs, verified customs rules, OCR review records, provider-neutral
+integration contracts, mobile milestone updates, and profitability/compliance
+reporting. Live bank, carrier, and OCR connections remain provider-specific and
+require authorized credentials and service agreements before activation.
 
 ## MVP 0.2.0
 
