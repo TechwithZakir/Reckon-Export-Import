@@ -134,10 +134,10 @@
   },
   {"color":"Orange","doc_view":"Report","label":"Upcoming Deadlines","link_to":"Trade Deadline Monitor","type":"Report"},
   {"color":"Red","doc_view":"List","label":"Pending Collections","link_to":"Export Realisation","type":"DocType","stats_filter":"{\"status\": [\"in\", [\"Pending\", \"Partially Realised\", \"Overdue\"]]}"},
-  {"color":"Blue","label":"Logistics Dashboard","type":"URL","url":"/app/logistics-analytics"},
-  {"color":"Orange","label":"Finance Dashboard","type":"URL","url":"/app/trade-finance-analytics"},
-  {"color":"Green","label":"Compliance Dashboard","type":"URL","url":"/app/compliance-analytics"},
-  {"color":"Purple","label":"Accounts Dashboard","type":"URL","url":"/app/trade-accounts-analytics"}
+  {"color":"Blue","label":"Logistics Dashboard","type":"URL","url":"/app/reckon-export-import/logistics-analytics"},
+  {"color":"Orange","label":"Finance Dashboard","type":"URL","url":"/app/reckon-export-import/trade-finance-analytics"},
+  {"color":"Green","label":"Compliance Dashboard","type":"URL","url":"/app/reckon-export-import/compliance-analytics"},
+  {"color":"Purple","label":"Accounts Dashboard","type":"URL","url":"/app/reckon-export-import/trade-accounts-analytics"}
  ],
  "title": "Export Import"
 }
