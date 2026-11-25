@@ -8,6 +8,8 @@ lang: en
 
 # Export-Import and Trade Operations Software on ERPNext: LC, Customs, Containers and Landed Cost
 
+![Banner](banner.svg)
+
 Exporters and importers in Bangladesh manage every shipment across letters of credit, bank documents, customs, containers and costs, usually in many disconnected files. **Reckon Export Import** by Reckon Technologies Ltd. brings these into one shipment file on Frappe/ERPNext, so trade, stock and accounting stay connected.
 
 ## Detailed features
